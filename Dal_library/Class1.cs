@@ -135,6 +135,33 @@ namespace Dal_library
             }
 
         }
+        public bool updateissue(int i)
+        {
+            
+                SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["librarydb"].ConnectionString);
+                SqlCommand cmd = new SqlCommand($"update issue set return_date=@para1,comments=@para2 where lib_issue_id={i} and comments is null",conn);
+                cmd.Parameters.AddWithValue("@para1",DateTime.Now);
+                cmd.Parameters.AddWithValue("@para2","returned");
+            
+
+
+                conn.Open();
+                int j = cmd.ExecuteNonQuery();
+                conn.Close();
+                conn.Dispose();
+                if (j == 1)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+
+           
+
+        }
         public List<Tuple<string,string>> presentbooks(int no)
         {
             List<Tuple<string,string>> s = new List<Tuple<string,string>>();

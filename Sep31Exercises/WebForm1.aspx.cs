@@ -69,6 +69,23 @@ namespace Sep31Exercises
             GridView7.DataBind();
         }
 
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            dal_issue u4 = new dal_issue();
+            int k=Convert.ToInt32(TextBox6.Text);
+            bool k1 = u4.updateissue(k);
+            if (k1)
+            {
+                TextBox7.Text = "returned successfully";
+            }
+            else
+            {
+                TextBox7.Text = "Already updated or some mismatches or not exist";
 
+            }
+            List<Bal_issue> c2 = u4.listissues();
+            GridView9.DataSource = c2;
+            GridView9.DataBind();
+        }
     }
 }

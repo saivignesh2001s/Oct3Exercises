@@ -33,10 +33,10 @@ namespace Bal_library
             get;
             set;
         }
-        public Bal_Book(int Book_No,string Name)
+        public Bal_Book(int Book_No, string Name)
         {
-            Bookid=Book_No;
-            Bname= Name;
+            Bookid = Book_No;
+            Bname = Name;
         }
         public Bal_Book()
         {
@@ -66,7 +66,7 @@ namespace Bal_library
             get;
             set;
         }
-        public int penalty
+        public int? penalty
         {
             get;
             set;
@@ -105,4 +105,16 @@ namespace Bal_library
             set;
         }
     }
+    public class Bal_User{
+        public int uname
+        {
+            get;
+            set;
+        } 
+        public string password
+        {
+            get;
+            set;
+        }
+        }
 }

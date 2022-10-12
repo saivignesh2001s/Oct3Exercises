@@ -11,7 +11,7 @@ namespace Sep31Exercises
 {
 
 
-    public partial class Problem1__1f
+    public partial class pagenotfound
     {
 
         /// <summary>

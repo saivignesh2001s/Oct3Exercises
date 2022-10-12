@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Sep31Exercises
 {
-    public partial class library : System.Web.UI.MasterPage
+    public partial class notfound : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

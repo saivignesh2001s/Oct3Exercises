@@ -67,25 +67,44 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Problem1.1f.aspx" />
+    <Content Include="count.aspx" />
+    <Content Include="notfound.aspx" />
+    <Content Include="pagenotfound.aspx" />
+    <Content Include="Problem11f.aspx" />
     <Content Include="Problem1.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
+    <Content Include="WebForm2.aspx" />
+    <Content Include="WebForm3.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="library.Master.cs">
-      <DependentUpon>library.Master</DependentUpon>
+    <Compile Include="count.aspx.cs">
+      <DependentUpon>count.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="library.Master.designer.cs">
-      <DependentUpon>library.Master</DependentUpon>
+    <Compile Include="count.aspx.designer.cs">
+      <DependentUpon>count.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Problem1.1f.aspx.cs">
-      <DependentUpon>Problem1.1f.aspx</DependentUpon>
+    <Compile Include="notfound.aspx.cs">
+      <DependentUpon>notfound.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Problem1.1f.aspx.designer.cs">
-      <DependentUpon>Problem1.1f.aspx</DependentUpon>
+    <Compile Include="notfound.aspx.designer.cs">
+      <DependentUpon>notfound.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pagenotfound.aspx.cs">
+      <DependentUpon>pagenotfound.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pagenotfound.aspx.designer.cs">
+      <DependentUpon>pagenotfound.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Problem11f.aspx.cs">
+      <DependentUpon>Problem11f.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Problem11f.aspx.designer.cs">
+      <DependentUpon>Problem11f.aspx</DependentUpon>
     </Compile>
     <Compile Include="Problem1.aspx.cs">
       <DependentUpon>Problem1.aspx</DependentUpon>
@@ -102,9 +121,22 @@
     <Compile Include="WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm3.aspx.cs">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm3.aspx.designer.cs">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="library.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -123,6 +155,7 @@
       <Name>Dal_library</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -73,8 +73,14 @@ namespace Dal_library
                 n1.member_name = dr[1].ToString();
                 n1.Accopen = Convert.ToDateTime(dr[2]);
                 n1.maxbooks = Convert.ToInt32(dr[3]);
-                n1.penalty = Convert.ToInt32(dr[4]);
-
+                if (dr[4] is DBNull)
+                {
+                    n1.penalty = null;
+                }
+                else
+                {
+                    n1.penalty = Convert.ToInt32(dr[4]);
+                }
             }
             conn.Close();
             conn.Dispose();
@@ -256,4 +262,27 @@ namespace Dal_library
         }
 
     }
+    public class dal_user
+    {
+        public List<Bal_User> listbooks()
+        {
+            List<Bal_User> co = new List<Bal_User>();
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["librarydb"].ConnectionString);
+            SqlCommand cmd = new SqlCommand("Select * from Users", conn);
+            conn.Open();
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                Bal_User book = new Bal_User();
+                book.uname = Convert.ToInt32(dr[0]);
+                book.password = dr[1].ToString();
+  
+                co.Add(book);
+            }
+            conn.Close();
+            conn.Dispose();
+            return co;
+        }
+    }
+    
 }
